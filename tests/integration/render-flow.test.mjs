@@ -9,7 +9,7 @@ test('рендер версии текста содержит заголовок
   const parsed = validateGuideData(guideData);
   const html = renderVersion(parsed.normalVersion);
 
-  assert.match(html, /Версия 1: нормально и четко/);
+  assert.match(html, /Версия 1: нормально и четко \(от моего имени\)/);
   assert.match(html, /cards-grid/);
   assert.match(html, /Gemini 3\.0/);
 });
@@ -19,7 +19,7 @@ test('рендер дополнений и чеклиста формирует �
   const additions = renderAdditions(parsed.additions);
   const checklist = renderChecklist(parsed.actionPlan);
 
-  assert.match(additions, /LLM всегда ошибаются/);
+  assert.match(additions, /Правило №1: не верю ответу без проверки/);
   assert.match(checklist, /input/);
   assert.match(checklist, /data-step="0"/);
 });

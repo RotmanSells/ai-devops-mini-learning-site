@@ -14,7 +14,7 @@ test('buildRecommendation выдает план под собесы', () => {
 
   assert.match(result.modelSetup, /Codex/i);
   assert.match(result.mode, /20 минут/);
-  assert.equal(result.checklist.length, 3);
+  assert.equal(result.checklist.length, 4);
 });
 
 test('buildRecommendation отклоняет некорректные входные данные', () => {
