@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ИИ для DevOps: мини-обучение</title>
+    <meta
+      name="description"
+      content="Простой и живой мини-гайд по выбору LLM и работе с ИИ-агентами для DevOps инженера."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "zod": "https://cdn.jsdelivr.net/npm/zod@3.25.76/+esm"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-left"></div>
+    <div class="bg-orb orb-right"></div>
+
+    <main class="page">
+      <header class="hero">
+        <p class="kicker">DevOps x AI Agents</p>
+        <h1 id="page-title"></h1>
+        <p id="page-subtitle" class="lead"></p>
+      </header>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Твой текст в двух форматах</h2>
+          <div class="switcher" role="tablist" aria-label="Выбор формата">
+            <button id="normal-btn" class="switch active" type="button" role="tab">
+              Нормально и четко
+            </button>
+            <button id="simple-btn" class="switch" type="button" role="tab">
+              Разжевано
+            </button>
+          </div>
+        </div>
+        <div id="story-container"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Что важно добавить от себя</h2>
+        <div id="additions-container"></div>
+      </section>
+
+      <section class="panel split">
+        <article>
+          <h2>Платформы, которые дают скорость</h2>
+          <div id="platforms-container" class="cards-grid"></div>
+        </article>
+        <article>
+          <h2>План действий на ближайшие 2 недели</h2>
+          <ul id="action-plan" class="bullet-list"></ul>
+        </article>
+      </section>
+
+      <section class="panel split">
+        <article>
+          <h2>Фокус на собесы (DevOps middle)</h2>
+          <ul id="interview-focus" class="bullet-list"></ul>
+        </article>
+        <article>
+          <h2>Личный чеклист</h2>
+          <div id="checklist-container"></div>
+          <p id="checklist-progress" class="progress">Выполнено 0/0</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Мини-консультант по твоей ситуации</h2>
+        <form id="advisor-form" class="advisor-form">
+          <label>
+            Цель
+            <select name="target">
+              <option value="interviews">Подготовка к собесам</option>
+              <option value="job_tasks">Рабочие задачи в компании</option>
+              <option value="freelance">Фриланс и свои проекты</option>
+            </select>
+          </label>
+
+          <label>
+            Бюджет
+            <select name="budget">
+              <option value="low">Низкий</option>
+              <option value="medium">Средний</option>
+              <option value="high">Высокий</option>
+            </select>
+          </label>
+
+          <label>
+            Темп
+            <select name="speed">
+              <option value="normal">Спокойный</option>
+              <option value="fast">Максимально быстрый</option>
+            </select>
+          </label>
+
+          <button type="submit" class="primary">Показать стратегию</button>
+        </form>
+        <div id="advisor-result"></div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

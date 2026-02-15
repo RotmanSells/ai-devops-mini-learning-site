@@ -1,0 +1,6 @@
+{
+  "project": "ai-agent-devops-mini-guide",
+  "environment": "production",
+  "poolSize": 5,
+  "readReplica": false
+}

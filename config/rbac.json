@@ -1,0 +1,16 @@
+{
+  "roles": [
+    {
+      "name": "owner",
+      "permissions": ["content:read", "content:edit", "deploy:run"]
+    },
+    {
+      "name": "editor",
+      "permissions": ["content:read", "content:edit"]
+    },
+    {
+      "name": "viewer",
+      "permissions": ["content:read"]
+    }
+  ]
+}

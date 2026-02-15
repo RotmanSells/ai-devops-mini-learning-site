@@ -1,0 +1,19 @@
+{
+  "name": "ai-agent-devops-mini-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:integration": "node --test tests/integration/*.test.mjs",
+    "test:e2e": "node --test tests/e2e/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "db:check": "node scripts/db-check.mjs",
+    "rbac:validate": "node scripts/rbac-validate.mjs"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  }
+}
